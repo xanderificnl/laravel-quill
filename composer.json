@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "xanderificnl/laravel-quill",
+    "description": "Integrates Quill with Laravel",
     "keywords": [
-        ":vendor_name",
+        "xanderificnl",
         "laravel",
-        ":package_slug"
+        "laravel-quill"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/xanderificnl/laravel-quill",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Xanderificnl",
+            "email": "xander@web-refinery.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Xanderificnl\\LaravelQuill\\": "src",
+            "Xanderificnl\\LaravelQuill\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Xanderificnl\\LaravelQuill\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Xanderificnl\\LaravelQuill\\LaravelQuillServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelQuill": "Xanderificnl\\LaravelQuill\\Facades\\LaravelQuill"
             }
         }
     },

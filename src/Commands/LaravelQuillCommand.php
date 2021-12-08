@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Xanderificnl\LaravelQuill\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelQuillCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-quill';
 
     public $description = 'My command';
 

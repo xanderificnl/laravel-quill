@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace Xanderificnl\LaravelQuill\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
