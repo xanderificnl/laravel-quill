@@ -15,11 +15,7 @@ You can install the package via composer:
 composer require xanderificnl/laravel-quill
 ```
 
-Install Quill into your project and add the assets in your layout
-
-```bash
-npm add quill
-```
+Install Quill into your project via NPM, or a CDN, and include a stylesheet and Quall's javascript.
 
 Set up your config:
 
