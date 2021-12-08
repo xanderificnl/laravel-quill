@@ -4,7 +4,8 @@ namespace Xanderificnl\LaravelQuill;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Xanderificnl\LaravelQuill\Commands\LaravelQuillCommand;
+//use Xanderificnl\LaravelQuill\Commands\LaravelQuillCommand;
+use Xanderificnl\LaravelQuill\View\Components\EditorComponent;
 
 class LaravelQuillServiceProvider extends PackageServiceProvider
 {
@@ -19,7 +20,9 @@ class LaravelQuillServiceProvider extends PackageServiceProvider
             ->name('laravel-quill')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-quill_table')
-            ->hasCommand(LaravelQuillCommand::class);
+            ->hasViewComponents(
+                'laravel-quill',
+                EditorComponent::class
+            );
     }
 }

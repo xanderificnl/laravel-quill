@@ -5,15 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/xanderificnl/laravel-quill/Check%20&%20fix%20styling?label=code%20style)](https://github.com/xanderificnl/laravel-quill/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/xanderificnl/laravel-quill.svg?style=flat-square)](https://packagist.org/packages/xanderificnl/laravel-quill)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-quill.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-quill)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Simple integration of Quill w/ Laravel.
 
 ## Installation
 
@@ -23,36 +15,30 @@ You can install the package via composer:
 composer require xanderificnl/laravel-quill
 ```
 
-You can publish and run the migrations with:
+Install Quill into your project and add the assets in your layout
 
 ```bash
-php artisan vendor:publish --tag="laravel-quill_without_prefix-migrations"
-php artisan migrate
+npm add quill
 ```
 
-You can publish the config file with:
-```bash
-php artisan vendor:publish --tag="laravel-quill_without_prefix-config"
-```
-
-Optionally, you can publish the views using
+Set up your config:
 
 ```bash
-php artisan vendor:publish --tag="example-views"
+php artisan vendor:publish --tag="laravel-quill-config"
 ```
 
-This is the contents of the published config file:
+Optionally, you can publish the view components using
 
-```php
-return [
-];
+```bash
+php artisan vendor:publish --tag="laravel-quill-components"
 ```
 
 ## Usage
 
-```php
-$laravel-quill = new Xanderificnl\LaravelQuill();
-echo $laravel-quill->echoPhrase('Hello, Xanderificnl!');
+```blade
+<x-laravel-quill-editor-component :id="$id" :options="$options">
+    <h1>Your content</h1>
+</x-laravel-quill-editor-component>
 ```
 
 ## Testing
