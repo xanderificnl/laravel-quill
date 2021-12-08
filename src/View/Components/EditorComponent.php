@@ -2,7 +2,6 @@
 
 namespace Xanderificnl\LaravelQuill\View\Components;
 
-use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
@@ -10,9 +9,7 @@ use Illuminate\View\Component;
 class EditorComponent extends Component
 {
     public string $id;
-//    public string $content;
     public string $options;
-
 
     public function __construct(string $id = '', array $options = [])
     {
@@ -20,11 +17,10 @@ class EditorComponent extends Component
             $id = Str::random(10);
         }
 
-        if (!in_array('theme', $options)) {
+        if (! in_array('theme', $options)) {
             $options['theme'] = 'snow';
         }
 
-//        $this->content = $content;
         $this->options = json_encode($options);
         $this->id = "quill_".$id;
     }
@@ -32,10 +28,5 @@ class EditorComponent extends Component
     public function render(): View
     {
         return view('quill::components.editor-component');
-//        , [
-//            'options' => json_encode($this->options),
-//            'content' => $this->content,
-//            'id' => "quill_".$this->id
-//        ]);
     }
 }
